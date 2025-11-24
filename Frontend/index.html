@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Company Research Assistant</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <div class="container">
+        <h2>Company Research Assistant</h2>
+
+        <div id="chat-box"></div>
+        <div id="loader" class="loader hidden">
+    <div class="spinner"></div>
+    <p>Generating plan… please wait</p>
+</div>
+
+<!-- container remains same; add this below chat-box/loader -->
+<!-- Modern Conflict Banner -->
+<!-- ✨ Modern Conflict Banner -->
+<div id="conflict-banner" class="conflict-banner hidden">
+    <div class="conflict-icon">⚠️</div>
+    <div class="conflict-info">
+        <div class="conflict-title">Conflicting Information Found</div>
+        <div id="conflict-text" class="conflict-description">I'm finding conflicting data…</div>
+    </div>
+
+    <button id="dig-btn" class="dig-btn">Dig Deeper</button>
+</div>
+
+
+<!-- editor modal (hidden by default) -->
+<div id="editor-modal" style="display:none; position:fixed; left:50%; top:50%; transform:translate(-50%,-50%); background:white; padding:20px; border-radius:8px; box-shadow:0 10px 30px rgba(0,0,0,0.2); width:70%;">
+  <h3 id="editor-title">Edit Section</h3>
+  <textarea id="editor-content" style="width:100%;height:140px;"></textarea>
+  <div style="margin-top:10px;text-align:right;">
+    <button id="editor-cancel">Cancel</button>
+    <button id="editor-save">Save</button>
+  </div>
+</div>
+
+
+        <div class="input-area">
+            <input type="text" id="user-input" placeholder="Ask anything… e.g. 'Create an account plan for Zoom'" />
+            <button onclick="sendMessage()">Send</button>
+            <button id="voice-btn">🎤 Speak</button>
+           <button id="reset-btn">Reset</button>
+
+
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
